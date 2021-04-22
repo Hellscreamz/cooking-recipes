@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  </head>
+  <body>
+      <header class="navbar">
+          <header class="header_title" >Something delicious awaits you...</header> 
+          <div class="wrapper">
+            <ul>
+        <li id="homeBtn">home</li>
+        <li id="aboutBtn">About</li>
+        <li id="service">Categories
+            <ul>
+                <button id="breakfast"><li>Breakfast</li></button>
+                <button id="lunch"><li>Lunch</li></button> 
+                <button id="dinner"><li>Dinner</li> </button>
+                <button id="snack"><li>Snack</li></button> 
+                <button id="teatime"><li>Teatime</li></button>   
+            </ul>
+        </li>
+        <li>Contact</li>
+        </ul>
+        </div>
+    </div>
+      </header>
+    <div class="container">
+      <input type="text" id="search_field" placeholder="Write a meal here..."/>
+      <button id="submit_btn">Submit</button>
+      
+      <div class="search_results">
+        <div class="item">
+          <img class="image_recipe" src=""/>
+          <div class="flex_container">
+            <h1 class="title"></h1>
+            <a class="view_button" href="#"></a>
+          </div>
+          <p class="item_data"></p>
+          <p class="recipe_info"></p>
+        </div>
+      </div>
+      <div class="categories_results">
+        <div class="item">
+          <img class="image_recipe" src=""/>
+          <div class="flex_container">
+            <h1 class="title"></h1>
+            <a class="view_button" href="#"></a>
+          </div>
+          <p class="item_data"></p>
+          <p class="recipe_info"></p>
+        </div>
+      </div>
+    </div>
+    <footer id="footer" >Copyright Martin's Solutions</footer>
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'handWriten';
+    src: url("/AlexBrush-Regular.ttf");
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'sweetBold';
+    src: url('/brush-hand-new.regular.ttf');
+    font-style: normal;
+}
+* body{
+    background: rgb(170,168,190);
+    background-blend-mode:luminosity;
+    background-image: url(/image.jfif);
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.navbar {
+    background-color: black;
+    
+}
+
+#title {
+    text-align: center;
+}
+#submit_btn {
+    margin: 0;
+    position: absolute;
+    top: 6.7%;
+    left: 57%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-color: transparent;
+    border-radius: 3px;
+    background-color: rgb(179, 26, 84);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    
+}
+#refresh {
+    margin: 0;
+    position: absolute;
+    top: 6.7%;
+    left: 61%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-color: transparent;
+    border-radius: 3px;
+    background-color: rgb(71, 110, 26);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    
+}
+#about {
+    margin: 0;
+    position: absolute;
+    left: 76%;
+    
+}
+#calculator {
+    margin: 0;
+    position: absolute;
+    left: 81%;
+    
+}
+#search_field {
+    margin: 0;
+    position: absolute;
+    top: 6.7%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+    background-color: rgb(209, 174, 209);
+    border-color: transparent;
+    font-size: 18px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#dropdownMenuButton2 {
+    margin: 0;
+    position:inherit;
+    left: -98%;
+    top: 6.7%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.image_recipe {
+    
+    border-radius: 8px;
+    
+    
+}
+.navbar {
+    background-color: rgb(29, 24, 23);
+}
+
+.header_title{
+    font-size: 2cm;
+    text-align: center;
+    color: white;
+    font-family: handWriten;
+    
+    
+}
+
+.search_results {
+    font-family: sweetBold;
+    font-size: 23px;
+    color: white;
+}
+#footer 
+    {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(26, 17, 17);
+        color: white;
+        text-align: center;
+        font-family: handWriten;
+      }
+
+#text {
+    font-family: sweetBold;
+    font-size: 23px;
+    color: rgb(199, 196, 5);
+    text-align: center;
+    top: 30%;
+    
+}
