@@ -9,10 +9,13 @@ const dataSearch = (callback) => $("#submit_btn").on("click", callback);
 
 dataSearch(async () => {
   const recipes = $("#search_field").val();
-  const responseSearch = await getRequest(recipes);
+  let responseSearch = await getRequest(recipes);
   let countRecipes = responseSearch.to;
 
+
+  const loadCategories = () => {
   $(".search_results").empty();
+  $('#text').empty();
   for (let index = 0; index < countRecipes; index++) {
     let calories = responseSearch.hits[index].recipe.calories;
     calories = Math.round(calories) + " Calories";
@@ -32,127 +35,36 @@ dataSearch(async () => {
             </div>`;
     $(".search_results").append(item);
   }
+}
+loadCategories();  
+
   //buttons categories
-  $("#breakfast").on("click", async function breakfast() {
+  $("#breakfast").on("click", async function () {
     mealSearch = "mealType=breakfast&";
-    const responseSearchCategories = await getRequest(recipes, mealSearch);
-    $(".search_results").empty();
-    for (let j = 0; j < countRecipes; j++) {
-      let caloriesCata = responseSearchCategories.hits[j].recipe.calories;
-      caloriesCata = Math.round(caloriesCata) + " Calories";
-      let imageCata = responseSearchCategories.hits[j].recipe.image;
-      let dataCata = responseSearchCategories.hits[j].recipe.ingredientLines;
-      let labelsCata = responseSearchCategories.hits[j].recipe.label;
-      let categoriestResult = [];
-      let item = `
-              <div class="item">
-              <div class="flex_container">
-              <h1 class="title">${labelsCata}</h1>
-              <img class="image_recipe" src="${imageCata}"/>
-              <a class="view_button" href="#"></a>
-              </div>
-              <p class="item_data">${caloriesCata}</p>
-              <p class="recipe_info">${dataCata}</p>
-              </div>`;
-      $(".search_results").append(item);
-    }
+    responseSearch = await getRequest(recipes, mealSearch);
+    loadCategories();
   });
 
   $("#lunch").on("click", async function () {
     mealSearch = "mealType=lunch&";
-    const responseSearchCategories = await getRequest(recipes, mealSearch);
-    $(".search_results").empty();
-    for (let j = 0; j < countRecipes; j++) {
-      let caloriesCata = responseSearchCategories.hits[j].recipe.calories;
-      caloriesCata = Math.round(caloriesCata) + " Calories";
-      let imageCata = responseSearchCategories.hits[j].recipe.image;
-      let dataCata = responseSearchCategories.hits[j].recipe.ingredientLines;
-      let labelsCata = responseSearchCategories.hits[j].recipe.label;
-
-      let item = `
-              <div class="item">
-              <div class="flex_container">
-              <h1 class="title">${labelsCata}</h1>
-              <img class="image_recipe" src="${imageCata}"/>
-              <a class="view_button" href="#"></a>
-              </div>
-              <p class="item_data">${caloriesCata}</p>
-              <p class="recipe_info">${dataCata}</p>
-              </div>`;
-
-      $(".search_results").append(item);
-    }
+    responseSearch = await getRequest(recipes, mealSearch);
+    loadCategories();
   });
   $("#dinner").on("click", async function () {
     mealSearch = "mealType=dinner&";
-    const responseSearchCategories = await getRequest(recipes, mealSearch);
-    $(".search_results").empty();
-    for (let j = 0; j < countRecipes; j++) {
-      let caloriesCata = responseSearchCategories.hits[j].recipe.calories;
-      caloriesCata = Math.round(caloriesCata) + " Calories";
-      let imageCata = responseSearchCategories.hits[j].recipe.image;
-      let dataCata = responseSearchCategories.hits[j].recipe.ingredientLines;
-      let labelsCata = responseSearchCategories.hits[j].recipe.label;
-
-      let item = `
-              <div class="item">
-              <div class="flex_container">
-              <h1 class="title">${labelsCata}</h1>
-              <img class="image_recipe" src="${imageCata}"/>
-              <a class="view_button" href="#"></a>
-              </div>
-              <p class="item_data">${caloriesCata}</p>
-              <p class="recipe_info">${dataCata}</p>
-              </div>`;
-      $(".search_results").append(item);
-    }
+    responseSearch = await getRequest(recipes, mealSearch);
+    loadCategories();
   });
   $("#snack").on("click", async function () {
     mealSearch = "mealType=snack&";
-    const responseSearchCategories = await getRequest(recipes, mealSearch);
-    $(".search_results").empty();
-    for (let j = 0; j < countRecipes; j++) {
-      let caloriesCata = responseSearchCategories.hits[j].recipe.calories;
-      caloriesCata = Math.round(caloriesCata) + " Calories";
-      let imageCata = responseSearchCategories.hits[j].recipe.image;
-      let dataCata = responseSearchCategories.hits[j].recipe.ingredientLines;
-      let labelsCata = responseSearchCategories.hits[j].recipe.label;
-
-      let item = `
-              <div class="item">
-              <div class="flex_container">
-              <h1 class="title">${labelsCata}</h1>
-              <img class="image_recipe" src="${imageCata}"/>
-              <a class="view_button" href="#"></a>
-              </div>
-              <p class="item_data">${caloriesCata}</p>
-              <p class="recipe_info">${dataCata}</p>
-              </div>`;
-      $(".search_results").append(item);
-    }
+    responseSearch = await getRequest(recipes, mealSearch);
+    loadCategories();
   });
   $("#teatime").on("click", async function () {
     mealSearch = "mealType=teatime&";
-    const responseSearchCategories = await getRequest(recipes, mealSearch);
-    $(".search_results").empty();
-    for (let j = 0; j < countRecipes; j++) {
-      let caloriesCata = responseSearchCategories.hits[j].recipe.calories;
-      caloriesCata = Math.round(caloriesCata) + " Calories";
-      let imageCata = responseSearchCategories.hits[j].recipe.image;
-      let dataCata = responseSearchCategories.hits[j].recipe.ingredientLines;
-      let labelsCata = responseSearchCategories.hits[j].recipe.label;
-
-      let item = `
-              <div class="item">
-              <div class="flex_container">
-              <h1 class="title">${labelsCata}</h1>
-              <img class="image_recipe" src="${imageCata}"/>
-              <a class="view_button" href="#"></a>
-              </div>
-              <p class="item_data">${caloriesCata}</p>
-              <p class="recipe_info">${dataCata}</p>
-              </div>`;
-      $(".search_results").append(item);
-    }
+    responseSearch = await getRequest(recipes, mealSearch);
+    loadCategories();
   });
 });
+
+$('.wrapper').css('cursor', 'pointer');

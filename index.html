@@ -10,54 +10,42 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
-      <header class="navbar">
-          <header class="header_title" >Something delicious awaits you...</header> 
-          <div class="wrapper">
-            <ul>
-        <li id="homeBtn">home</li>
-        <li id="aboutBtn">About</li>
-        <li id="service">Categories
-            <ul>
-                <button id="breakfast"><li>Breakfast</li></button>
-                <button id="lunch"><li>Lunch</li></button> 
-                <button id="dinner"><li>Dinner</li> </button>
-                <button id="snack"><li>Snack</li></button> 
-                <button id="teatime"><li>Teatime</li></button>   
-            </ul>
-        </li>
-        <li>Contact</li>
-        </ul>
-        </div>
-    </div>
-      </header>
-    <div class="container">
-      <input type="text" id="search_field" placeholder="Write a meal here..."/>
-      <button id="submit_btn">Submit</button>
-      
-      <div class="search_results">
-        <div class="item">
-          <img class="image_recipe" src=""/>
-          <div class="flex_container">
-            <h1 class="title"></h1>
-            <a class="view_button" href="#"></a>
-          </div>
-          <p class="item_data"></p>
-          <p class="recipe_info"></p>
-        </div>
+    <header class="navbar">
+        <header class="header_title" >Something delicious awaits you...</header> 
+        <div class="wrapper">
+          <ul>
+      <a href="index.html"><li id="homeBtn">home</li></a>
+      <a href="About.html"><li id="aboutBtn">About</li></a>
+      <li id="service">Categories
+          <ul>
+              <button id="breakfast"><li>Breakfast</li></button>
+              <button id="lunch"><li>Lunch</li></button> 
+              <button id="dinner"><li>Dinner</li> </button>
+              <button id="snack"><li>Snack</li></button> 
+              <button id="teatime"><li>Teatime</li></button>   
+          </ul>
+      </li>
+      <li>Contact</li>
+      </ul>
       </div>
-      <div class="categories_results">
-        <div class="item">
-          <img class="image_recipe" src=""/>
-          <div class="flex_container">
-            <h1 class="title"></h1>
-            <a class="view_button" href="#"></a>
-          </div>
-          <p class="item_data"></p>
-          <p class="recipe_info"></p>
+  
+    </header>
+  <div class="container">
+    <input type="text" id="search_field" placeholder="Write a meal here..."/>
+    <button id="submit_btn">Submit</button>
+    <div class="search_results">
+      <div class="item">
+        <img class="image_recipe" src=""/>
+        <div class="flex_container">
+          <h1 class="title"></h1>
+          <a class="view_button" href="#"></a>
         </div>
+        <p class="item_data"></p>
+        <p class="recipe_info"></p>
       </div>
     </div>
-    <footer id="footer" >Copyright Martin's Solutions</footer>
+  </div>
+  <footer id="footer" >Copyright Martin's Solutions</footer>
     <script src="app.js"></script>
   </body>
 </html>
